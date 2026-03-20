@@ -1,7 +1,5 @@
 # Echo: Decentralized Music Discovery & Export Engine
 
-![Echo Header Image](https://raw.githubusercontent.com/yashk/echo/main/assets/header.png)
-
 ## 1. The Problem: Centralized Music Ecosystems
 Digital music is currently a "walled garden." Platforms like Spotify and Apple Music centralize discovery algorithms and API access to enforce user lock-in.
 
@@ -10,6 +8,9 @@ Digital music is currently a "walled garden." Platforms like Spotify and Apple M
 * **Data Silos:** Metadata is proprietary and often inconsistent across platforms.
 
 **Echo** decentralizes this process. It orchestrates recommendations using open-source community data, bypassing proprietary paywalls through precise ISRC fingerprinting and client-side automation.
+
+---
+![Echo Project Header](assets/Screenshot 2026-03-20 121946.png)
 
 ---
 
@@ -48,3 +49,24 @@ $$Score(t) = (\alpha \cdot Sim) + (\beta \cdot Tag) + (\gamma \cdot Pop)$$
 git clone [https://github.com/yashk/echo.git](https://github.com/yashk/echo.git)
 cd echo
 pip install requests
+```
+### Step 2: Configure Credentials
+```python
+LASTFM_API_KEY = "your_lastfm_key"
+LASTFM_SECRET = "your_lastfm_secret"
+```
+
+## 5. Usage
+Run the main engine. The CLI will autonomously detect the seed track's genre before prompting for your target discovery parameters.
+
+### Pipeline Flow:
+**Input:** Enter Seed Artist & Track
+**Analyze:** System derives genre tags autonomously
+**Fetch:** 150+ candidates pulled from decentralized nodes
+**Resolve:** ISRCs matched (Match 1-3) with 1.2s throttling
+**Export:** Select Spotify (OAuth) or Apple Music (Shortcut URL)
+
+### 6. Zero-Cost Deployment Logic
+Echo avoids the $99/year Apple Developer fee by generating **Delimiter-Separated Value (DSV)** strings. These are passed via *shortcuts://run-shortcut* deep links to a local iOS Shortcut, which handles the final "Add to Library" action on the user's hardware rather than the server.
+
+
