@@ -14,7 +14,6 @@ Digital music is currently a "walled garden." Platforms like Spotify and Apple M
 ---
 
 ## 2. Technical Profile
-**Echo (Music Recommendation)** (Python, REST API, OAuth 2.0, Feature Engineering)
 *A decentralized music recommendation system leveraging open-source metadata and algorithmic scoring to automate cross-platform playlist generation without proprietary API licensing costs.*
 
 * **Engine Architecture:** Synchronizes Last.fm metadata and MusicBrainz ISRC resolution via a weighted ranking algorithm.
