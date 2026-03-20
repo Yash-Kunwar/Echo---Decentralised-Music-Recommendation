@@ -1,5 +1,11 @@
 # Echo: Decentralized Music Discovery & Export Engine
 
+---
+
+https://github.com/user-attachments/assets/65a72a1d-1023-49f1-9cea-cebb0c122d18
+
+---
+
 ## 1. The Problem: Centralized Music Ecosystems
 Digital music is currently a "walled garden." Platforms like Spotify and Apple Music centralize discovery algorithms and API access to enforce user lock-in.
 
@@ -8,9 +14,6 @@ Digital music is currently a "walled garden." Platforms like Spotify and Apple M
 * **Data Silos:** Metadata is proprietary and often inconsistent across platforms.
 
 **Echo** decentralizes this process. It orchestrates recommendations using open-source community data, bypassing proprietary paywalls through precise ISRC fingerprinting and client-side automation.
-
----
-![Echo Project Header](assets/Screenshot 2026-03-20 121946.png)
 
 ---
 
